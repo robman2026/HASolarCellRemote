@@ -26,6 +26,8 @@ Add the following to your Home Assistant configuration:
 		 launch_spotify: "curl -X POST http://[YOURTVIP]:8001/api/v2/applications/3201606009684"
 		 launch_disney: "curl -X POST http://[YOURTVIP]:8001/api/v2/applications/MCmYXNxgcu.DisneyPlus"
 
+<img width="618" alt="grafik" src="https://github.com/user-attachments/assets/7f7012c6-5b1b-4597-a363-bee5f128a407" />
+
 $\color{red}{\text{IMPORTANT: Make sure to restart your HA after this change!}}$
 
 $\color{red}{\text{DISCLAIMER:}}$ The application IDs above might depend on the region you are in. These are for Switzerland and work for me.
@@ -45,6 +47,28 @@ Implementation:
 4. Copy the contents of mobile-remote.yaml from this repo and paste it into the editor.
 5. Change the entity_id: media_player.[YourTVName] to your own.
 6. Repeat the process for desktop-remote.yaml.
-		
-This is the code for a custom card in Home Assistant that imitates a Samsung SolarCell Remote controll device. This card can be added to any dashboard. 
 
+## 👁️ Step 3: Setting Visibility
+
+To keep your dashboard clean, use the Visibility settings in the card editor:
+* For the Mobile Card: Go to the Visibility tab and set it to show only when the screen factor is Mobile.
+* For the Desktop Card: Set the condition to hide on mobile or show only when the screen factor is Desktop.
+
+This ensures that Home Assistant automatically serves the correct remote version based on the device you are holding.
+
+## 🧩 Prerequisites
+
+For this card to render correctly, ensure you have the following installed via [HACS](https://hacs.xyz/docs/use/):
+* [button-card](https://github.com/custom-cards/button-card)
+* [stack-in-card](https://github.com/custom-cards/stack-in-card) (or use native vertical/horizontal stacks)
+
+## 🤝 Contributing
+
+If you have optimized the YAML further or added new icons for other regions, feel free to open a Pull Request!
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature/NewLayout)
+3. Commit your Changes (git commit -m 'Add new feature')
+4. Push to the Branch (git push origin feature/NewLayout)
+5. Open a Pull Request
+
+Don't forget to ⭐️ this repository if you find it useful!
