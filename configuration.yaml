@@ -1,0 +1,6 @@
+shell_command:
+	 launch_netflix: "curl -X POST http://[YOURTVIP]:8001/api/v2/applications/3201907018807"
+	 launch_youtube: "curl -X POST http://[YOURTVIP]:8001/api/v2/applications/9Ur5IzDKqV.TizenYouTube"
+	 launch_prime: "curl -X POST http://[YOURTVIP]:8001/api/v2/applications/3201910019365"
+	 launch_spotify: "curl -X POST http://[YOURTVIP]:8001/api/v2/applications/3201606009684"
+	 launch_disney: "curl -X POST http://[YOURTVIP]:8001/api/v2/applications/MCmYXNxgcu.DisneyPlus"
