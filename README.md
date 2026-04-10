@@ -1,6 +1,6 @@
 # ☀️Samsung SolarCell Remote Card for Home Assistant
 
-A sleek, modern, and highly functional custom remote card for Home Assistant that mimics the minimalist Samsung SolarCell Remote (TM2180E/TM2360E). This project provides a pixel-perfect UI for controlling your Samsung TV with dedicated support for streaming services.
+A sleek, modern, and highly functional custom remote card for Home Assistant that mimics the minimalist Samsung SolarCell Remote (TM2180E/TM2360E). This project provides a UI for controlling your Samsung TV with dedicated support for streaming services.
 
 ## ✨ Features
 * Dual-Layout Design: Separate configurations for Mobile and Desktop to ensure perfect ergonomics.
@@ -26,7 +26,9 @@ Add the following to your Home Assistant configuration:
 		 launch_spotify: "curl -X POST http://[YOURTVIP]:8001/api/v2/applications/3201606009684"
 		 launch_disney: "curl -X POST http://[YOURTVIP]:8001/api/v2/applications/MCmYXNxgcu.DisneyPlus"
 
-DISCLAIMER: The application IDs above might depend on the region you are in. These are for Switzerland and work for me.
+$\color{red}{\text{IMPORTANT: Make sure to restart your HA after this change!}}$
+
+$\color{red}{\text{DISCLAIMER:}}$ The application IDs above might depend on the region you are in. These are for Switzerland and work for me.
 You can find yours in going to Activity in HA, and add the [TVName] TV channel name, att a timeline whene you used all the applications you need. Ther you find something like this:
 
     [YourTV] TV channel name changed to MCmYXNxgcu.DisneyPlus
@@ -37,11 +39,12 @@ This repository contains two YAML files:
 2. desktop-remote.yaml: A wider layout for tablets and desktop browsers.
 
 Implementation:
-    1. Open your Dashboard.
-    2. Enter Edit Mode and click Add Card.
-    3. Choose the Manual card at the bottom of the list.
-    4. Copy the contents of mobile-remote.yaml from this repo and paste it into the editor.
-    5. Repeat the process for desktop-remote.yaml.
+1. Open your Dashboard.
+2. Enter Edit Mode and click Add Card.
+3. Choose the Manual card at the bottom of the list.
+4. Copy the contents of mobile-remote.yaml from this repo and paste it into the editor.
+5. Change the entity_id: media_player.[YourTVName] to your own.
+6. Repeat the process for desktop-remote.yaml.
 		
 This is the code for a custom card in Home Assistant that imitates a Samsung SolarCell Remote controll device. This card can be added to any dashboard. 
 
