@@ -1,5 +1,5 @@
-**# Samsung SolarCell Remote Card for Home Assistant
-**
+**# Samsung SolarCell Remote Card for Home Assistant**
+
 A sleek, modern, and highly functional custom remote card for Home Assistant that mimics the minimalist Samsung SolarCell Remote (TM2180E/TM2360E). This project provides a pixel-perfect UI for controlling your Samsung TV with dedicated support for streaming services.
 ✨ **Features**
 Dual-Layout Design: Separate configurations for Mobile and Desktop to ensure perfect ergonomics.
